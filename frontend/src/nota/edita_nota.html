@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edição de Nota</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .form-container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container form-container">
+        <h1 class="mt-4">Editar Nota</h1>
+        <form id="updateNotaForm">
+            <input type="hidden" id="updateNotaId">
+            <div class="mb-3">
+                <label for="updateAluno" class="form-label">Aluno</label>
+                <select class="form-control" id="updateAluno" required>
+                    <!-- Alunos serão inseridos dinamicamente aqui -->
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="updateAtividade" class="form-label">Atividade</label>
+                <select class="form-control" id="updateAtividade" required>
+                    <!-- Atividades serão inseridas dinamicamente aqui -->
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="updateNota" class="form-label">Nota</label>
+                <input type="number" class="form-control" id="updateNota" max="100" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Atualizar Nota</button>
+            <button type="button" onclick="window.location.href='cad_nota.html'" class="btn btn-secondary mt-3">Voltar</button>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../src/nota/edita_nota.js"></script>
+</body>
+</html>

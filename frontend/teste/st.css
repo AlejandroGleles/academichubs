@@ -1,0 +1,23 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.nav-item .nav-link {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.container-fluid h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.container-fluid p {
+    font-size: 20px;
+    color: #666;
+}

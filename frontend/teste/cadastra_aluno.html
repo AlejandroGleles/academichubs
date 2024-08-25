@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Alunos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .aluno-card {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            background-color: #f8f9fa;
+        }
+        .card-actions {
+            margin-top: 10px;
+            display: flex;
+            justify-content: flex-end;
+        }
+        .scrollable-container {
+            max-height: 500px; /* Ajuste a altura conforme necessário */
+            overflow-y: auto;
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+        .turma-checkbox {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Cadastro de Alunos</h1>
+
+        <!-- Formulário de Cadastro de Aluno -->
+        <form id="alunoForm" class="mb-5">
+            <div class="mb-3">
+                <label for="nome" class="form-label">Nome do Aluno</label>
+                <input type="text" class="form-control" id="nome" placeholder="Nome do aluno" required>
+            </div>
+            <div class="mb-3">
+                <label for="matricula" class="form-label">Matrícula</label>
+                <input type="text" class="form-control" id="matricula" placeholder="Matrícula" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Turmas</label>
+                <div id="turmas-container">
+                    <!-- As turmas serão inseridas dinamicamente aqui -->
+                </div>
+                <small class="form-text text-muted">Selecione as turmas nas quais o aluno está matriculado.</small>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Cadastrar Aluno</button>
+            <div>
+                <button type="button" onclick="window.location.href='principal.html'" class="btn btn-secondary mt-3">Voltar</button>
+            </div>
+        </form>
+
+        <!-- Lista de Alunos -->
+        <h2>Lista de Alunos</h2>
+        <div id="alunos-container" class="scrollable-container mt-4">
+            <div id="lista"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../src/aluno/cad_aluno.js"></script>
+</body>
+</html>

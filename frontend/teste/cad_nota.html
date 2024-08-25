@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Notas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .nota-card {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            background-color: #f8f9fa;
+        }
+        .card-actions {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Cadastro de Notas</h1>
+
+        <!-- Formulário de Cadastro de Nota -->
+        <form id="notaForm" class="mb-5">
+            <div class="mb-3">
+                <label for="turma" class="form-label">Turma</label>
+                <select class="form-control" id="turma" required>
+                    <!-- Turmas serão inseridas dinamicamente aqui -->
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="atividade" class="form-label">Atividade</label>
+                <select class="form-control" id="atividade" required>
+                    <!-- Atividades serão inseridas dinamicamente aqui -->
+                </select>
+            </div>
+            <div id="alunosNotas" class="mt-4">
+                <!-- Alunos e campos para notas serão inseridos dinamicamente aqui -->
+            </div>
+            <button type="submit" class="btn btn-primary">Cadastrar Nota</button>
+            <button type="button" onclick="window.location.href='principal.html'" class="btn btn-secondary mt-3">Voltar</button>
+        </form>
+
+        <!-- Lista de Notas -->
+        <h2>Lista de Notas</h2>
+        <div id="listaNotas" class="mt-4"></div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../src/nota/cad_nota.js"></script></body>
+
+
+</body>
+</html>

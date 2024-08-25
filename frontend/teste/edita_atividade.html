@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edição de Atividade</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .form-container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container form-container">
+        <h1 class="mt-4">Editar Atividade</h1>
+        <form id="updateAtividadeForm">
+            <input type="hidden" id="updateAtividadeId">
+            <div class="mb-3">
+                <label for="updateNome" class="form-label">Nome da Atividade</label>
+                <input type="text" class="form-control" id="updateNome" required>
+            </div>
+            <div class="mb-3">
+                <label for="updatePontos" class="form-label">Pontos Máximos</label>
+                <input type="number" class="form-control" id="updatePontos" max="100" required>
+            </div>
+            <div class="mb-3">
+                <label for="updateTurma" class="form-label">Turma</label>
+                <select class="form-control" id="updateTurma" required>
+                    <!-- As turmas serão inseridas dinamicamente aqui -->
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Atualizar Atividade</button>
+            <button type="button" onclick="window.location.href='cad_atividade.html'" class="btn btn-secondary mt-3">Voltar</button>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../src/atividade/edita_atividade.js"></script>
+</body>
+</html>

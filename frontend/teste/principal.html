@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Escolar - Dashboard</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .card {
+            margin: 15px 0;
+        }
+        .dashboard {
+            margin-top: 20px;
+        }
+        .filter-buttons {
+            margin-bottom: 20px;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Sistema Escolar</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link" href="cadastro_professores.html">Professores</a></li>
+                <li class="nav-item"><a class="nav-link" href="cad_turma.html">Turmas</a></li>
+                <li class="nav-item"><a class="nav-link" href="cadastra_aluno.html">Alunos</a></li>
+                <li class="nav-item"><a class="nav-link" href="cadastro_atividades.html">Atividades</a></li>
+                <li class="nav-item"><a class="nav-link" href="cad_nota.html">Notas</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Dashboard -->
+    <div class="container dashboard">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card bg-info text-white">
+                    <div class="card-body">
+                        <h5 class="card-title">Total de Professores</h5>
+                        <p id="totalProfessores" class="card-text">0</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card bg-success text-white">
+                    <div class="card-body">
+                        <h5 class="card-title">Total de Turmas</h5>
+                        <p id="totalTurmas" class="card-text">0</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card bg-warning text-white">
+                    <div class="card-body">
+                        <h5 class="card-title">Total de Alunos</h5>
+                        <p id="totalAlunos" class="card-text">0</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card bg-danger text-white">
+                    <div class="card-body">
+                        <h5 class="card-title">Total de Atividades</h5>
+                        <p id="totalAtividades" class="card-text">0</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botões de Filtro -->
+    <div class="container filter-buttons">
+        <button class="btn btn-primary" onclick="mostrar('professores')">Professores</button>
+        <button class="btn btn-secondary" onclick="mostrar('turmas')">Turmas</button>
+        <button class="btn btn-success" onclick="mostrar('alunos')">Alunos</button>
+        <button class="btn btn-warning" onclick="mostrar('atividades')">Atividades</button>
+        <button class="btn btn-danger" onclick="mostrar('notas')">Notas</button>
+    </div>
+
+    <!-- Listas -->
+    <div class="container mt-4">
+        <div id="professoresLista" class="row hidden"></div>
+        <div id="turmasLista" class="row hidden"></div>
+        <div id="alunoLista" class="hidden"></div>
+        <div id="atividadesLista" class="row hidden"></div>
+        <div id="notasLista" class="row hidden"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script> <!-- Adicione este arquivo JS -->
+</body>
+</html>

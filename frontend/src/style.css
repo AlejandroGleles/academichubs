@@ -1,0 +1,20 @@
+body {
+    display: flex;
+}
+#sidebar {
+    width: 250px;
+    height: 100vh;
+    background: #f8f9fa;
+    padding: 20px;
+}
+#content {
+    flex: 1;
+    padding: 20px;
+}
+
+#sidebar{
+    background-color: #757761;
+}
+#navbar{ 
+    background-color: blue;
+}

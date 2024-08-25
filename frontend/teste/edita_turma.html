@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Turma</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Editar Turma</h2>
+        <form id="updateTurmaForm">
+            <div class="form-group">
+                <label for="updateNome">Nome:</label>
+                <input type="text" class="form-control" id="updateNome" required>
+            </div>
+            <div class="form-group">
+                <label for="updateSemestre">Semestre:</label>
+                <input type="text" class="form-control" id="updateSemestre" required>
+            </div>
+            <div class="form-group">
+                <label for="updateAno">Ano:</label>
+                <input type="text" class="form-control" id="updateAno" required>
+            </div>
+            <div class="form-group">
+                <label for="updateProfessor">Professor:</label>
+                <select class="form-control" id="updateProfessor" required>
+                    <option value="" disabled>Selecione o professor</option>
+                </select>
+            </div>
+            <input type="hidden" id="updateTurmaId" value="">
+            <button type="submit" class="btn btn-primary">Atualizar</button>
+            <a href="principal.html" class="btn btn-secondary">Voltar</a> <!-- Botão de Voltar -->
+        </form>
+    </div>
+    <script src="../src/turma/edita_turma.js"></script> <!-- Ajuste o caminho conforme necessário -->
+</body>
+</html>
